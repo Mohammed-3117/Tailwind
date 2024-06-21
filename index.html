@@ -13,7 +13,7 @@
             <div class="flex">
                 <a href="" class="font-bold text-3xl pr-5  border border-r-purple-800 mr-5">Mohammed</a>
                 <div class="my-auto">
-                    <button class="lg:hidden">
+                    <button class="lg:hidden" onclick="mobileMenu()">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
                           </svg>
@@ -33,7 +33,7 @@
                   </a>
                 
             </div>
-            <div class="hidden">
+            <div class="hidden" id="menu">
                 <ul class="lg:hidden text-gray-600 font-bold">
                     <li class="pr-5 py-2"><a class="px-3 py-2" href="">About</a></li>
                     <li class="pr-5 py-2"><a class="px-3 py-2" href="">Services</a></li>
@@ -915,5 +915,16 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function mobileMenu(){
+            var menu = document.getElimentById("menu");
+            if(menu.classList.contains('hidden'){
+                menu.classList.remove('hidden');
+            }else{
+                menu.classList.add('hidden');
+            }
+        }
+    </script>
 </body>
 </html>
